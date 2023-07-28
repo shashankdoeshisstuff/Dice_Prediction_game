@@ -1,19 +1,6 @@
-import { useState } from "react"
 import { styled } from "styled-components"
 
-const RoleDice = () => {
-    const [currentDice, setCurrentDice] = useState(1);
-
-    const generateRanNum = () => {
-        return (Math.floor(Math.random()* 6) + 1);
-    }
-
-    const roleDice = () => {
-        const randomNumber = generateRanNum();
-
-        setCurrentDice((prev) => randomNumber)
-    }  
-
+const RoleDice = ({ currentDice, roleDice}) => {
 
   return (
     <DiceContainer>
