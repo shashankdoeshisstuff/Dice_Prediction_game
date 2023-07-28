@@ -1,19 +1,19 @@
+import { useState } from 'react';
 import './App.css'
-import styled from 'styled-components';
 import StartGame from './components/StartGame';
-
-
-const Button = styled.button`
-  background-color: black;
-  color: white;
-  padding: 10px;
-`;
+import GamePlay from './components/GamePlay';
 
 function App() {
 
+  const [isGameStarted, setIsGameStarted] = useState(false);
+
+  const toggleGamePlay = () => {
+    setIsGameStarted((prev) => !prev);
+  }
+
   return (
     <>
-     <StartGame />
+     {isGameStarted ? <GamePlay /> : <StartGame toggle={toggleGamePlay} />}
     </>
   )
 }
