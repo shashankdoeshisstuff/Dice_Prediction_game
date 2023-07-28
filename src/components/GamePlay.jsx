@@ -1,4 +1,5 @@
 import NumberSelector from "./NumberSelector"
+import RoleDice from "./RoleDice"
 import TotalScore from "./TotalScore"
 import styled from 'styled-components'
 
@@ -9,6 +10,7 @@ const GamePlay = () => {
         <TotalScore />
         <NumberSelector />
       </div>
+      <RoleDice />
     </MainContainer>
   )
 }
@@ -16,6 +18,7 @@ const GamePlay = () => {
 export default GamePlay
 
 const MainContainer = styled.main`
+    padding-top: 50px;
   .top_sec {
     display: flex;
     justify-content: space-around;
